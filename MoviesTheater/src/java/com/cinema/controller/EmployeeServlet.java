@@ -16,7 +16,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class EmployeeServlet extends HttpServlet {
 
     private final EmployeeDAO employeeDAO = new EmployeeDAO();
