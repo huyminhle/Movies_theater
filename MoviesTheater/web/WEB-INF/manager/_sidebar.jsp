@@ -6,9 +6,11 @@
     <c:set var="r" value="${sessionScope.account.roleId}" />
 
     <div class="cgv-sidebar-top">
-        <img class="cgv-logo"
-             src="${pageContext.request.contextPath}/Image/Icon/cgvlogo.png"
-             alt="CGV Cinema">
+        <a href="${pageContext.request.contextPath}/">
+            <img class="cgv-logo"
+                 src="${pageContext.request.contextPath}/Image/Icon/cgvlogo.png"
+                 alt="CGV Cinema">
+        </a>
     </div>
 
     <nav class="cgv-nav">
@@ -63,6 +65,18 @@
                 <line x1="7" y1="7" x2="7.01" y2="7"/>
             </svg>
             Promotions
+        </a>
+
+        <a href="${pageContext.request.contextPath}/manager/employees"
+           class="cgv-nav-link ${activeNav eq 'employees' ? 'active' : ''}">
+            <svg class="cgv-nav-icon" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Employees
         </a>
 
         <a href="${pageContext.request.contextPath}/RoomServlet"
